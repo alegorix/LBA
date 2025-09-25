@@ -26,5 +26,17 @@
 <p>noindex, follow : "N'affiche pas cette page sur Google, mais fais confiance aux liens qu'elle contient." (Utile pour des pages de résultats de recherche internes, des archives, etc.).</p>
 
 <p>noindex, nofollow : "N'affiche pas cette page sur Google et ignore tous les liens qu'elle contient." (Utile pour des pages de connexion ou des pages en cours de développement).</p>
+
+<h2>Critère	robots.txt</h2>
+<p>Portée : Le site entier (fichiers et dossiers).</p>
+<p>Action : Empêche l'exploration (le robot ne lit pas la page).</p>
+<p>Sécurité Faible : Le fichier est public et les robots malveillants l'ignorent. Ne cache pas le contenu.</p>
+<p>Cas d'usage : Bloquer des ressources techniques, des scripts, des zones d'administration.</p>
+<h2>Critère <meta name="robots"></h2>
+<p>Portée : Une page HTML unique.</p>
+<p>Action : Autorise l'exploration mais contrôle l'indexation (le robot lit la page mais obéit aux ordres).</p>
+<p>Sécurité : Élevée. C'est la méthode fiable pour empêcher une page d'apparaître sur Google.</p>
+<p>Cas d'usage : Empêcher l'indexation de pages de remerciement, de comptes utilisateurs, de contenu dupliqué, etc.</p>
+
 </body>
 </html>
