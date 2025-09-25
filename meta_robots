@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma Page Confidentielle</title>
+
+    <meta name="robots" content="noindex, follow">
+    
+</head>
+<body>
+    <h2>Valeurs les plus courantes :</h2>
+
+<p>index : Autorise l'indexation de la page (valeur par défaut).</p>
+
+<p>noindex : Interdit l'indexation de la page. Elle n'apparaîtra pas dans les résultats de recherche.</p>
+
+<p>follow : Autorise le robot à suivre les liens présents sur la page pour découvrir d'autres pages.</p>
+
+<p>nofollow : Interdit au robot de suivre les liens présents sur la page.</p>
+
+<p>noarchive : Empêche les moteurs de recherche de garder une version en cache de la page.</p>
+
+<p>nosnippet : Empêche l'affichage d'une description textuelle (snippet) ou d'un aperçu vidéo sous le titre dans les résultats de recherche.</p>
+
+<h2>Combinaisons fréquentes :</h2>
+
+<p>noindex, follow : "N'affiche pas cette page sur Google, mais fais confiance aux liens qu'elle contient." (Utile pour des pages de résultats de recherche internes, des archives, etc.).</p>
+
+<p>noindex, nofollow : "N'affiche pas cette page sur Google et ignore tous les liens qu'elle contient." (Utile pour des pages de connexion ou des pages en cours de développement).</p>
+</body>
+</html>
