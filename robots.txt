@@ -1,0 +1,16 @@
+# Fichier robots.txt
+
+# Cette règle s'applique à tous les robots
+User-agent: *
+
+# Ne pas explorer le dossier /admin/ et tout son contenu
+Disallow: /admin/
+
+# Ne pas explorer le fichier spécifique /page-secrete.html
+Disallow: /page-secrete.html
+
+# Autoriser l'exploration du reste du site (c'est le comportement par défaut)
+Allow: /
+
+# Indiquer l'emplacement du sitemap
+Sitemap: https://www.votresite.com/sitemap.xml
