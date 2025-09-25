@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de Structure HTML5</title>
+    <meta name="description" content="Une page d'exemple montrant l'utilisation des balises sémantiques HTML5.">
+
+    <style>
+        body { 
+            font-family: sans-serif; 
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+        /* Styles pour visualiser les blocs sémantiques */
+        header { background-color: #333; color: #fff; padding: 1rem; }
+        nav ul { list-style: none; padding: 0; }
+        nav li { display: inline; margin-right: 20px; }
+        nav a { color: #fff; text-decoration: none; }
+        main { padding: 1rem; }
+        section { border-left: 3px solid #f0a500; padding-left: 1rem; margin-bottom: 2rem; }
+        article { background-color: #fdfdfd; padding: 1rem; border: 1px solid #ddd; }
+        figure { margin: 1.5rem 0; border: 1px solid #ccc; padding: 0.5rem; }
+        figure img { max-width: 100%; height: auto; }
+        figcaption { text-align: center; font-style: italic; color: #555; }
+        aside { background-color: #eaf6ff; border: 1px solid #b4dfff; padding: 1rem; margin-top: 1.5rem; }
+        footer { background-color: #333; color: #fff; text-align: center; padding: 1rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Mon Blog de Voyage</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <header>
+                    <h2>Une Aventure dans les Ardennes Belges</h2>
+                    <p>Publié le <time datetime="2025-09-25">25 septembre 2025</time></p>
+                </header>
+
+                <section>
+                    <h3>La Descente de la Lesse en Kayak</h3>
+                    <p>Notre première journée a été consacrée à la célèbre descente de la Lesse. Le paysage était à couper le souffle, avec des châteaux médiévaux surplombant la rivière et des formations rocheuses impressionnantes.</p>
+                    
+                    <figure>
+                        <img src="https://picsum.photos/id/1043/800/400" alt="Rivière sinuant entre des collines verdoyantes.">
+                        <figcaption>Vue panoramique de la Lesse depuis les hauteurs.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h3>Randonnée dans la Forêt de Saint-Hubert</h3>
+                    <p>Le lendemain, nous avons exploré la forêt de Saint-Hubert. C'est un lieu paisible, idéal pour se reconnecter avec la nature. Nous avons eu la chance d'apercevoir un cerf.</p>
+                </section>
+
+                <aside>
+                    <h4>Le Saviez-vous ?</h4>
+                    <p>Les Ardennes s'étendent sur trois pays : la Belgique, la France et le Luxembourg.</p>
+                </aside>
+                
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Mon Blog de Voyage - Tous droits réservés.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
