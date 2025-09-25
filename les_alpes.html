@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorez les Alpes</title>
+    
+    <style>
+        /* --- 1. Importation des polices et variables --- */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500&display=swap');
+
+        :root {
+            --primary-color: #ffffff;
+            --dark-color: #0a192f;
+            --accent-color: #64ffda;
+            --text-color: #ccd6f6;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+        }
+
+        /* --- 2. Styles de base et reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--dark-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- 3. Section Héros (l'image principale) --- */
+        .hero {
+            position: relative;
+            height: 100vh; /* Prend toute la hauteur de l'écran vh=VerticalHeight */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1514496959998-c01c40915c5f?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: var(--primary-color);
+        }
+        
+        /* Ajoute une surcouche sombre pour la lisibilité du texte */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 25, 47, 0.6);
+        }
+
+        .hero-content {
+            position: relative; /* Pour être au-dessus de la surcouche */
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem; /* 4 fois la taille de police de base */
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .hero p span {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* --- 4. Section de contenu avec des cartes --- */
+        .content-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap; /* Permet aux cartes de passer à la ligne */
+        }
+
+        .card {
+            background-color: #112240;
+            border-radius: 8px;
+            padding: 1.5rem;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* Effet au survol de la souris */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            font-family: var(--font-heading);
+            margin-bottom: 1rem;
+        }
+        
+        /* --- 5. Rendre la page responsive pour les mobiles --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Les Alpes</h1>
+            <p>Découvrez la majesté des sommets <span>éternels</span>.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Activités incontournables</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Randonnée</h3>
+                    <p>Parcourez des sentiers à couper le souffle, des alpages verdoyants aux crêtes rocheuses.</p>
+                </div>
+                <div class="card">
+                    <h3>Ski & Snowboard</h3>
+                    <p>Profitez de domaines skiables de renommée mondiale avec une neige de qualité exceptionnelle.</p>
+                </div>
+                <div class="card">
+                    <h3>Gastronomie</h3>
+                    <p>Dégustez les spécialités locales, fromages et charcuteries, dans un cadre authentique.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
