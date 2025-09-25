@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Ma Page Confidentielle</title>
-
+    <meta charset="UTF-8">
     <meta name="robots" content="noindex, follow">
-    
+    <script>
+      console.log("La page est chargée !");
+    </script>
 </head>
 <body>
 <h1>La balise meta robots</h1>
