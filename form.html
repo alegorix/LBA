@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact Complet</title>
+    
+    <style>
+        /* --- Importation de la police & Variables --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        :root {
+            --background-color: #1e1e2f;
+            --form-background: #27293d;
+            --input-background: #32344a;
+            --text-color: #f0f0f0;
+            --accent-color: #00aaff;
+            --border-color: #4a4c6a;
+            --error-color: #ff4d4d;
+        }
+
+        /* --- Styles de base --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+
+        /* --- Conteneur du formulaire --- */
+        .form-container {
+            background-color: var(--form-background);
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 700px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+        }
+
+        /* --- Groupes de champs (fieldset) --- */
+        fieldset {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        legend {
+            padding: 0 0.5rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        /* --- Styles des champs, labels et inputs --- */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--input-background);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* --- Styles spécifiques pour radio, checkbox, range --- */
+        .choice-group {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: var(--accent-color);
+        }
+        
+        input[type="range"] {
+            width: 100%;
+        }
+
+        /* --- Bouton d'envoi --- */
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: 6px;
+            color: var(--background-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0099e6;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Contactez-nous</h1>
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Informations Personnelles</legend>
+                <div class="form-group">
+                    <label for="name">Nom complet :</label>
+                    <input type="text" id="name" name="user_name" placeholder="Ex: Jean Dupont" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="user_email" placeholder="email@exemple.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone (format: 04xx/xx.xx.xx) :</label>
+                    <input type="tel" id="phone" name="user_phone" pattern="04[0-9]{2}/[0-9]{2}.[0-9]{2}.[0-9]{2}" placeholder="0470/12.34.56">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Votre Demande</legend>
+                <div class="form-group">
+                    <label>Sujet de votre message :</label>
+                    <div class="choice-group">
+                        <input type="radio" id="subject-pro" name="subject" value="pro" checked>
+                        <label for="subject-pro">Demande professionnelle</label>
+                    </div>
+                    <div class="choice-group">
+                        <input type="radio" id="subject-perso" name="subject" value="perso">
+                        <label for="subject-perso">Question personnelle</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service concerné :</label>
+                    <select id="service" name="service">
+                        <option value="">-- Veuillez choisir --</option>
+                        <option value="ventes">Service Commercial</option>
+                        <option value="support">Support Technique</option>
+                        <option value="rh">Recrutement</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre message :</label>
+                    <textarea id="message" name="user_message" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Détails Additionnels</legend>
+                <div class="form-group">
+                    <label for="appointment">Date de rendez-vous souhaitée :</label>
+                    <input type="date" id="appointment" name="appointment_date">
+                </div>
+                 <div class="form-group">
+                    <label for="satisfaction">Niveau de satisfaction (0 à 10) :</label>
+                    <input type="range" id="satisfaction" name="satisfaction_level" min="0" max="10" value="5">
+                </div>
+                <div class="form-group">
+                    <label for="attachment">Joindre un fichier :</label>
+                    <input type="file" id="attachment" name="user_attachment">
+                </div>
+            </fieldset>
+            
+            <div class="form-group">
+                 <div class="choice-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">J'accepte la politique de confidentialité.</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Envoyer le Message</button>
+        </form>
+    </div>
+
+</body>
+</html>
