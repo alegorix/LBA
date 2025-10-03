@@ -32,6 +32,8 @@ body {
     border-radius: 10px;
 }
 
+.bleu {color:#007BFF;}
+
 /* --- En-tête --- */
 header {
     display: flex;
