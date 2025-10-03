@@ -46,7 +46,7 @@ Ce dépôt contient deux journées-projets complètes (8 heures chacune). L'obje
 ### **Bloc 2 : Contenu des Pages (2h)**
 
 1.  **Finaliser la Page d'Accueil (`index.html`) :**
-    - Dans `<main>`, ajoutez des sections `<section>` pour la présentation du café et ses spécialités, avec des titres `<h2>`, des paragraphes `<p>` et une image `<img>` (utilisez `https://via.placeholder.com/300` pour l'instant).
+    - Dans `<main>`, ajoutez des sections `<section>` pour la présentation du café et ses spécialités, avec des titres `<h2>`, des paragraphes `<p>` et une image `<img>` (utilisez `https://placehold.co/300` pour l'instant).
 
 2.  **Créer la Page "Notre Carte" (`pages/carte.html`) :**
     - Copiez la structure de `index.html`.
