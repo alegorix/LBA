@@ -106,6 +106,15 @@ Ce dépôt contient deux journées-projets complètes (8 heures chacune). L'obje
         --text-color: #333;
         --main-font: 'Arial', sans-serif;
       }
+      h1 {
+        color: var(--primary-color); /* Applique la couleur #6a4f4b */
+        }
+
+      body {
+        font-family: var(--main-font); /* Applique la police 'Arial', sans-serif */
+        background-color: var(--secondary-color); /* Applique le fond beige clair */
+        }
+
       ```
 
 3.  **Styles de base :**
