@@ -1,0 +1,168 @@
+
+/* --- Fontes --- 
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+
+
+/* --- Style Général --- */
+body {
+    font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* --- En-tête --- */
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header-left {
+    margin-right: 30px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Rend l'image ronde */
+    object-fit: cover; /* Assure que l'image couvre bien l'espace */
+}
+
+.header-right h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #007BFF;
+}
+
+.header-right h2 {
+    margin: 5px 0 15px;
+    font-weight: 400;
+    font-style: italic;
+    color: #555;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #444;
+}
+
+/* --- Sections --- */
+h3 {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+    color: #007BFF;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+.job h4, .education h4 {
+    margin-bottom: 5px;
+}
+
+.job p, .education p {
+    margin-top: 0;
+    font-style: italic;
+    color: #777;
+}
+
+/* --- Compétences --- */
+.skills {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 5px 5px 5px 0;
+    border-radius: 5px;
+}
+
+/* --- Pied de page --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* --- MEDIA QUERIES POUR LE RESPONSIVE --- */
+
+/* Pour les écrans jusqu'à 768px de large (tablettes, grands téléphones) */
+@media screen and (max-width: 768px) {
+    
+    /* On réduit les marges générales du corps de la page */
+    body {
+        padding: 10px;
+    }
+
+    /* On réduit le padding intérieur du CV */
+    .cv-container {
+        padding: 20px;
+    }
+
+    /* On passe l'en-tête en mode colonne (vertical) */
+    header {
+        flex-direction: column;
+        text-align: center; /* On centre le texte pour un meilleur look */
+    }
+
+    /* On supprime la marge à droite de la photo */
+    .header-left {
+        margin-right: 0;
+        margin-bottom: 20px; /* On ajoute un espace sous la photo */
+    }
+
+    /* On peut réduire un peu la taille du titre principal */
+    .header-right h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* Pour les écrans jusqu'à 640px de large (petits téléphones) */
+@media screen and (max-width: 640px) {
+    .skills li {
+        display: block; /* Chaque compétence prend toute la largeur */
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .header-right h1 {
+        font-size: 2em; /* On réduit encore un peu le titre */
+    }
+}
